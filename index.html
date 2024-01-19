@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game with JavaScript</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Juego de Adivinanza de Palabras</title>
 </head>
 <body>
-    <div class="game">
-        <div class="controls">
-            <button>Start</button>
-            <div class="stats">
-                <div class="moves">0 moves</div>
-                <div class="timer">Time: 0 sec</div>
-            </div>
-        </div>
-        <div class="board-container">
-            <div class="board" data-dimension="4"></div>
-            <div class="win">You won!</div>
-        </div>
+    <div class="container">
+        <h1>Adivina la palabra</h1>
+        <center><div id="word-display"></div></center>
+        <center>
+          <p>Intentos restantes: <span id="attempts"></span></p>
+        </center>
+        <input type="text" id="guess-input" placeholder="Ingrese una letra">
+        <center>
+        <button onclick="makeGuess()">Adivinar</button>
+        <p id="message"></p>
+        <button id="next-button" onclick="goToNextPage()">Siguiente</button>
+        <button id="restart-button" onclick="restartGame()">Volver a Iniciar</button>
+      </center>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
